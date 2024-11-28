@@ -5,9 +5,14 @@ import 'package:provider/provider.dart';
 import 'package:flutter_app/providers/theme_provider.dart';
 import 'package:flutter_app/helpers/preferences.dart';
 
-class ThemeSwitchWidget extends StatelessWidget {
+class ThemeSwitchWidget extends StatefulWidget {
   const ThemeSwitchWidget({Key? key}) : super(key: key);
 
+  @override
+  State<ThemeSwitchWidget> createState() => _ThemeSwitchWidgetState();
+}
+
+class _ThemeSwitchWidgetState extends State<ThemeSwitchWidget> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<bool>(
