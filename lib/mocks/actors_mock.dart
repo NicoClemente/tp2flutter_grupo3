@@ -398,7 +398,7 @@
   'knownfor': ['Game of Thrones', 'Me Before You', 'The Notebook'],
   'popularity': 152.345,
   'profileImage': 'assets/actors_assets/avatars/avatar12.png',
-  'biography': "Emilia Clarke es una joven actriz, modelo y autora ritánica. Es conocida por interpretar a Daenerys Targaryen en la serie de HBO Game of Thrones. ."
+  'biography': "Emilia Clarke es una joven actriz, modelo y autora Británica. Es conocida por interpretar a Daenerys Targaryen en la serie de HBO Game of Thrones. ."
 }
 
 ];
