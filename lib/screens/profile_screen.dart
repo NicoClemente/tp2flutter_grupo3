@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/widgets/custom_app_bar.dart';
-//import 'package:flutter_app/helpers/preferences.dart';
-//import 'package:flutter_app/providers/theme_provider.dart';
-import 'package:flutter_app/widgets/theme_switch_widget.dart'; 
-//import 'package:provider/provider.dart';
+import 'package:flutter_app/widgets/theme_switch_widget.dart';
+import 'package:flutter_app/widgets/form_profile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -19,10 +17,14 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderProfile(size: size),
+            HeaderProfile(size: size), // Foto de avatar al inicio
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 15), 
+              child: ThemeSwitchWidget(), // Tema oscuro debajo del avatar
+            ),
             const Padding(
               padding: EdgeInsets.all(15.0),
-              child: BodyProfile(),
+              child: BodyProfile(), // Formulario al final
             ),
           ],
         ),
@@ -36,7 +38,7 @@ class BodyProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ThemeSwitchWidget(); 
+    return FormProfile(); // Formulario
   }
 }
 
@@ -57,7 +59,7 @@ class HeaderProfile extends StatelessWidget {
       child: Center(
         child: CircleAvatar(
           radius: 100,
-          child: Image.asset('assets/images/avatar.png'),
+          child: Image.asset('assets/images/avatar.png'), // Imagen del avatar
         ),
       ),
     );
