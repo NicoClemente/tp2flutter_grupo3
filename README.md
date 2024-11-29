@@ -21,7 +21,8 @@ Este proyecto fue desarrollado por Clemente Nicolás, Mattei Stefano y Racciatti
 
 - **CARLA RACCIATTI:  "🎭 Sección de Actores Populares".** 
     Para este prototipo creé el archivo "actors_mock.dart" donde creé una lista de mapas (50 registros) para tener un prototipo similar a los datos que devolverá mi API TMDb. Cada registro corresponde a un actor con datos como id, nombre, popularidad, biografía, foto de perfil y trabajos por los que es reconocido. 
-    Creé el widget reutilizable "custom_list_tile.dart" que luego utilizo en el archivo "actors_list_screen" para crear una lista de actores en general. Al principio se cargan algunos registros y al scrollear se van cargando nuevos actores hasta llegar al final de la lista. 
+    Las fotos de perfil se encuentran guardadas en la carpeta assets/actors_assets/avatars. 
+    Creé el widget reutilizable "custom_list_tile.dart" que luego utilizo en el archivo "actors_list_screen" para crear una lista de actores. Al principio se cargan algunos registros y al scrollear hacia abajo se van cargando nuevos actores hasta llegar al final de la lista. 
     En esa misma pantalla también está incluida la opción de buscar/filtrar los actores por nombre y por número de ID. 
     Al hacer click en un actor, se navega a la pantalla "actor_details.dart" donde se encuentra la foto del actor, su nivel de popularidad y su biografía. 
     También incluí una sección para que el usuario escriba una reseña u opinión sobre el actor y un switch para que el usuario pueda marcar al actor como "favorito". 
