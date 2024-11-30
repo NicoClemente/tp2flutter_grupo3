@@ -27,7 +27,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final movie = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    final movie =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     final size = MediaQuery.of(context).size;
     final isSmallScreen = size.width < 600;
 
@@ -74,19 +75,22 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
         constraints: const BoxConstraints(maxHeight: 500),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15),
-          child: Image.asset(
-            movie['imageAsset'],
-            fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) {
-              return Container(
-                height: 400,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Icon(Icons.movie, size: 100, color: Colors.white54),
-              );
-            },
+          child: Center(
+            child: Image.asset(
+              movie['imageAsset'],
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return Container(
+                  height: 400,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child:
+                      const Icon(Icons.movie, size: 100, color: Colors.white54),
+                );
+              },
+            ),
           ),
         ),
       ),
@@ -100,8 +104,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
         Text(
           movie['title'],
           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+                fontWeight: FontWeight.bold,
+              ),
         ),
         const SizedBox(height: 8),
         Row(
@@ -126,7 +130,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
           children: (movie['genres'] as List<String>)
               .map((genre) => Chip(
                     label: Text(genre),
-                    backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+                    backgroundColor:
+                        Theme.of(context).primaryColor.withOpacity(0.1),
                   ))
               .toList(),
         ),
@@ -174,11 +179,9 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
           const SizedBox(height: 16),
           SwitchListTile(
             title: const Text('Marcar como favorita'),
-            subtitle: Text(
-              _isFavorite 
+            subtitle: Text(_isFavorite
                 ? 'Esta película está en tus favoritos'
-                : 'Agrega esta película a tus favoritos'
-            ),
+                : 'Agrega esta película a tus favoritos'),
             value: _isFavorite,
             onChanged: (bool value) {
               setState(() {

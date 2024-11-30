@@ -5,24 +5,24 @@ class SeriesAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback onSearchTap;
 
   const SeriesAppBar({
-    Key? key,
+    super.key,
     required this.title,
     required this.onSearchTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title),
       leading: IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back),
         onPressed: () {
           Navigator.pushReplacementNamed(context, 'home');  // Vuelve a la pantalla principal
         },
       ),
       actions: [
         IconButton(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
           onPressed: onSearchTap,
         ),
       ],

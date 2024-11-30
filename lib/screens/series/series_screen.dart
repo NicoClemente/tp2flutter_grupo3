@@ -10,6 +10,8 @@ class SeriesScreen extends StatelessWidget {
   final String featuredTitle = 'One Piece';
   final String featuredDescription = 'Luffy, un joven con poderes de goma, lidera a su tripulación en una épica aventura para encontrar el legendario tesoro "One Piece" y convertirse en el Rey de los Piratas, enfrentándose a enemigos poderosos y desafiando el orden mundial.';
 
+  const SeriesScreen({super.key});
+
   void _onSearchTap(BuildContext context) {
     showSearch(
       context: context,
@@ -40,10 +42,10 @@ class SeriesScreen extends StatelessWidget {
                 ),
               );
             },
-            child: FeaturedSeriesImage(), // Imagen principal clickeable
+            child: const FeaturedSeriesImage(), // Imagen principal clickeable
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "Series Recomendadas",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

@@ -23,6 +23,8 @@ class RecommendedSeriesSwiper extends StatelessWidget {
     'Walter White, un profesor de química con cáncer terminal, se asocia con un exalumno para fabricar metanfetaminas, entrando en un oscuro mundo criminal mientras lucha por proteger a su familia.'
   ];
 
+  RecommendedSeriesSwiper({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -46,7 +48,7 @@ class RecommendedSeriesSwiper extends StatelessWidget {
             },
             child: Card(
               elevation: 5,
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               child: Image.asset(imagePaths[index]),
             ),
           );
