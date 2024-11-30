@@ -66,11 +66,42 @@ Este proyecto fue desarrollado por Clemente Nicolás, Mattei Stefano y Racciatti
 
 
 - **STEFANO MATTEI: 📺 Sección de Series**
+Para la sección de Series, desarrollé las siguientes pantallas y funcionalidades:
+
+Pantalla Principal de Series (series_screen.dart):
+
+Muestra una imagen destacada de una serie popular (en este caso, "One Piece").
+Incluye un ListView horizontal con recomendaciones de otras series populares.
+Al hacer clic en la imagen destacada o en una de las recomendaciones, se navega a la pantalla de detalles de la serie.
+Cuenta con un AppBar personalizado que permite volver a la pantalla principal y acceder a la funcionalidad de búsqueda.
 
 
+Pantalla de Detalles de Serie (series_detail_screen.dart):
+
+Muestra la imagen de la serie en la parte superior.
+Debajo, se presenta el título y la descripción de la serie.
+Al hacer clic en la imagen, se abre un diálogo que muestra una versión ampliada de la imagen.
 
 
+Funcionalidad de Búsqueda (series_search_delegate.dart):
 
+Implementa un SearchDelegate personalizado que permite a los usuarios buscar series por título.
+Muestra una lista de resultados de búsqueda, y al seleccionar una serie, se navega a la pantalla de detalles correspondiente.
+
+
+Widgets Reutilizables:
+
+FeaturedSeriesImage: Widget que muestra la imagen destacada de la serie en la pantalla principal.
+RecommendedSeriesSwiper: Widget que muestra un ListView horizontal con las recomendaciones de series.
+SeriesAppBar: Widget personalizado para el AppBar de la sección de Series.
+SeriesCard: Widget que representa una tarjeta de serie en la lista de recomendaciones.
+
+
+Organización del Código:
+
+Los archivos relacionados con la sección de Series se encuentran en la carpeta lib/screens/series/.
+Los widgets reutilizables se encuentran en lib/widgets/series_widgets/.
+Las imágenes de las series se encuentran en assets/images/series_images/.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
