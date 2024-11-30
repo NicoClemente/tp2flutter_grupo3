@@ -7,7 +7,10 @@ import '../actors/actor_details_screen.dart';
 
 
 class ActorsListScreen extends StatefulWidget {
+  const ActorsListScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ActorsListScreenState createState() => _ActorsListScreenState();
 }
 
@@ -52,12 +55,12 @@ class _ActorsListScreenState extends State<ActorsListScreen> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 8),  
+          const SizedBox(height: 8),  
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0 , vertical: 8.0),
             child: TextField(
               controller: _searchController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Escribe nombre o ID del actor para buscar",
                 suffixIcon: Icon(Icons.search),
               ),
@@ -82,22 +85,22 @@ class _ActorsListScreenState extends State<ActorsListScreen> {
                 return false;
               },
               child: ListView.builder(
-                physics: BouncingScrollPhysics(),  // Efecto de rebote al llegar al final de la lista. No pude probarlo porque en el navegador no funciona pero en android sí debería verse correctamente. 
+                physics: const BouncingScrollPhysics(),  // Efecto de rebote al llegar al final de la lista. No pude probarlo porque en el navegador no funciona pero en android sí debería verse correctamente. 
                 itemCount: actors.isEmpty
                     ? 1  
                     : actors.length + (hasMoreActors ? 0 : 1), 
                 itemBuilder: (context, index) {
                   if (actors.isEmpty) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    return const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Center(child: Text('No coincidences')),
                     );
                   }
 
                   // Si no hay más actores para cargar, decidí mostrar el mensaje que avisa que es el fin de la lista.
                   if (!hasMoreActors && index == actors.length) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    return const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Center(child: Text(' - Fin de la lista -')),
                     );
                   }
@@ -116,8 +119,8 @@ class _ActorsListScreenState extends State<ActorsListScreen> {
                           );
                         },
                       ),
-                      Divider(
-                        color: const Color.fromARGB(255, 117, 114, 114),
+                      const Divider(
+                        color: Color.fromARGB(255, 117, 114, 114),
                         thickness: 0.7,
                         indent: 15,
                         endIndent: 15,

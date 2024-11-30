@@ -6,7 +6,7 @@ import 'package:flutter_app/providers/theme_provider.dart';
 import 'package:flutter_app/helpers/preferences.dart';
 
 class ThemeSwitchWidget extends StatefulWidget {
-  const ThemeSwitchWidget({Key? key}) : super(key: key);
+  const ThemeSwitchWidget({super.key});
 
   @override
   State<ThemeSwitchWidget> createState() => _ThemeSwitchWidgetState();
@@ -31,6 +31,7 @@ class _ThemeSwitchWidgetState extends State<ThemeSwitchWidget> {
             await Preferences.setThemePreference(value);
 
             final themeProvider =
+                // ignore: use_build_context_synchronously
                 Provider.of<ThemeProvider>(context, listen: false);
             themeProvider.toggleTheme(); 
           },

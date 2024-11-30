@@ -38,7 +38,7 @@ class BodyProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FormProfile(); // Formulario
+    return const FormProfile(); // Formulario
   }
 }
 
