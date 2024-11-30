@@ -28,6 +28,41 @@ Este proyecto fue desarrollado por Clemente Nicolás, Mattei Stefano y Racciatti
     También incluí una sección para que el usuario escriba una reseña u opinión sobre el actor y un switch para que el usuario pueda marcar al actor como "favorito". 
     
 - **NICOLÁS CLEMENTE S.: 🎬 Sección de Películas**
+ Desarrollé una sección completa para explorar y descubrir películas. Para este prototipo, creé el archivo "movies_mock.dart" con una lista de películas populares que simula los datos que posteriormente se obtendrán de la API TMDb.
+
+    **Características principales:**
+    1. **Lista de Películas (movies_list_screen):**
+        - Grid view responsivo que se adapta a diferentes tamaños de pantalla
+        - Barra de búsqueda para filtrar películas por título
+        - Filtros por género implementados con Chips
+        - Vista en grid con 1-4 columnas según el ancho de la pantalla
+
+    2. **Detalles de Película (movie_details_screen):**
+        - Visualización detallada de cada película
+        - Imagen destacada con animación Hero
+        - Información completa: título, año, rating y sinopsis
+        - Formulario para agregar reseñas con TextFormField
+        - Switch para marcar películas como favoritas
+        - Diseño responsivo que se adapta a diferentes dispositivos
+
+    3. **Widget Reutilizable (movie_card):**
+        - Card personalizada para mostrar películas
+        - Manejo de imágenes con fallbacks
+        - Diseño consistente con el tema de la aplicación
+        - Parámetros requeridos y opcionales para máxima flexibilidad
+
+    **Organización del código:**
+    - Los datos mockeados están en `lib/mock/movies_mock.dart`
+    - Las pantallas están en `lib/screens/movies/`
+    - Los widgets reutilizables en `lib/widgets/movies/`
+    - Imágenes de películas en `assets/images/movies/`
+
+    **Aspectos técnicos:**
+    - Implementación de StatefulWidget para manejo de estado
+    - Uso de Provider para el tema de la aplicación
+    - Diseño responsivo para diferentes tamaños de pantalla
+    - Animaciones y transiciones suaves
+    - Manejo de errores y estados de carga
 
 
 - **STEFANO MATTEI: 📺 Sección de Series**
