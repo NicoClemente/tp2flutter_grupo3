@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 class ActorDetailsScreen extends StatefulWidget {
   final Map<String, dynamic> actor;
 
-  const ActorDetailsScreen({Key? key, required this.actor}) : super(key: key);
+  const ActorDetailsScreen({super.key, required this.actor});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ActorDetailsScreenState createState() => _ActorDetailsScreenState();
 }
 
@@ -105,8 +106,8 @@ Widget _buildActorHeader(BuildContext context) {
             placeholder: 'assets/actors_assets/loading.gif',  
             image: widget.actor['profileImage'], 
             fit: BoxFit.cover,
-            fadeInDuration: Duration(seconds: 2),  
-            fadeOutDuration: Duration(milliseconds: 500),
+            fadeInDuration: const Duration(seconds: 2),  
+            fadeOutDuration: const Duration(milliseconds: 500),
             imageErrorBuilder: (context, error, stackTrace) {
               return const Icon(Icons.person, size: 100, color: Colors.white54);  // Icono de persona en caso de que haya error con la imagen
             },
@@ -119,8 +120,6 @@ Widget _buildActorHeader(BuildContext context) {
 
 
   Widget _buildActorInfo(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final titleSize = screenWidth * 0.06;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

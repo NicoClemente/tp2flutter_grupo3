@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/helpers/preferences.dart';
 
 class FormProfile extends StatefulWidget {
-  const FormProfile({Key? key}) : super(key: key);
+  const FormProfile({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _FormProfileState createState() => _FormProfileState();
 }
 

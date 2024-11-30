@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app/screens/screens.dart';
 import 'package:flutter_app/providers/theme_provider.dart';
-//import 'package:flutter_app/themes/default_theme.dart';
 import 'package:flutter_app/helpers/preferences.dart';
 
 void main() async {
@@ -32,7 +31,8 @@ class MyApp extends StatelessWidget {
               'profile': (context) => const ProfileScreen(),
               'actors': (context) =>  ActorsListScreen(),//Carla
               'series': (context) =>  SeriesScreen(),
-              //'movies': (context) => const ...(),
+              'movies': (context) => const MoviesListScreen(),//Nicolás
+              'movie_details': (context) => const MovieDetailsScreen()//Nicolás
             },
           );
         },
