@@ -32,7 +32,8 @@ class MyApp extends StatelessWidget {
               'profile': (context) => const ProfileScreen(),
               'actors': (context) =>  ActorsListScreen(),//Carla
               //'series': (context) => const ...(),
-              //'movies': (context) => const ...(),
+              'movies': (context) => const MoviesListScreen(),//Nicolás
+              'movie_details': (context) => const MovieDetailsScreen()//Nicolás
             },
           );
         },
